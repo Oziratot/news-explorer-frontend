@@ -1,0 +1,124 @@
+.popup {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    transition: visibility 0.3s, opacity 0.3s linear;
+    z-index: 2;
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+.popup_opened {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup__container {
+    width: calc(430px - 2 * 36px);
+    background-color: white;
+    opacity: 1;
+    margin: auto;
+    align-self: center;
+    border-radius: 16px;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    cursor: auto;
+    padding: 34px 36px 28px 36px;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
+    z-index: 4;
+}
+
+.popup__close-btn {
+    position: absolute;
+    top: -46px;
+    right: -46px;
+    width: 45px;
+    height: 45px;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    background-image: url(../../images/close.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+.popup__text {
+    font-family: 'Roboto';
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 28px;
+    margin: 0;
+    margin-bottom: 22px;
+}
+
+.popup__save-btn {
+    padding: 0;
+    margin-top: 39px;
+    margin-bottom: 16px;
+    width: 100%;
+    height: 64px;
+    border-radius: 100px;
+    border: none;
+    background-color: #E6E8EB;
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: #B6BCBF;
+}
+
+.popup__save-btn_active {
+    color: white;
+    background-color: #2F71E5;
+    box-shadow: 0px 5px 15px rgba(14, 26, 57, 0.2);
+    cursor: pointer;
+}
+
+.popup__save-btn_active:active {
+    background-color: #2A65CC;
+}
+
+.popup__undertext {
+    margin: 0 auto;
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.popup__underbutton {
+    border: none;
+    background-color: transparent;
+    color: #2F71E5;
+}  
+
+.popup__underbutton:hover {
+    cursor: pointer;
+}
+
+@media all and (max-device-width: 500px) {
+
+    .popup__container {
+        margin: 0;
+        align-self: flex-end;
+        width: 100%;
+        height: 504px;
+        margin-bottom: -20px;
+    }
+
+    .popup__close-btn {
+        background-image: url(../../images/mobile-close.svg);
+        right: 0;
+        top: -40px;
+        height: 24px;
+        width: 24px;
+    }
+}

@@ -1,0 +1,224 @@
+.articles__element {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    max-height: 576px;
+    z-index: 1;
+}
+
+.articles__icons {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.articles__button {
+    background-color: white;
+    border: none;
+    border-radius: 8px;
+    height: 40px;
+    width: 40px;
+    padding: 0;
+}
+
+.articles__button_mark {
+    background-image: url(../../images/bookmark.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: .15s linear;
+}
+
+.articles__button_mark-logged {
+    background-image: url(../../images/bookmark.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: .15s linear;
+}
+
+.articles__button_mark:hover {
+    cursor: pointer;
+    background-image: url(../../images/bookmark-hover.svg);
+}
+
+.articles__button_mark-logged:hover {
+    cursor: pointer;
+    background-image: url(../../images/bookmark-hover.svg);
+}
+
+.articles__button_mark:hover + .articles__tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+.articles__button_mark-saved {
+    background-image: url(../../images/bookmark-saved.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+.articles__button_delete {
+    background-image: url(../../images/trash.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.articles__button_delete:hover {
+    background-image: url(../../images/trash-hover.svg);
+    cursor: pointer;
+}
+
+.articles__button_delete:hover +.articles__tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+.articles__tooltip {
+    background-color: white;
+    margin: 0;
+    margin-right: 5px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 22px rgba(59, 74, 116, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 11px;
+    font-family: 'Roboto', 'Arial', sans-serif;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.articles__keyword {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    padding: 0 12px;
+    margin: 0;
+    height: 40px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    font-family: 'Roboto', 'Arial', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    margin-right: auto;
+}
+
+.articles__image {
+    max-width: 400px;
+    max-height: 272px;
+    border-radius: 16px 16px 0 0;
+    object-fit: cover;
+}
+
+.articles__description {
+  display: flex;
+  flex-direction: column;  
+  background-color: white;
+  border-radius: 0 0 16px 16px;
+  padding: 20px 24px 24px 24px;
+  height: 260px;
+  max-width: 352px;
+}
+
+.articles__date {
+    font-family: 'Source Sans Pro', 'Arial', sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    color: #B6BCBF;
+    margin: 0;
+    margin-bottom: 12px;
+}
+
+.articles__title {
+    font-family: 'Roboto Slab', 'Arial', sans-serif;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 30px;
+    color: #1A1B22;
+    margin: 0;
+    margin-bottom: 16px;
+}
+
+.articles__text {
+    font-family: 'Roboto', 'Arial', sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #1A1B22;
+    margin: 0;
+    margin-bottom: auto;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.articles__source {
+    text-decoration: none;
+    font-family: 'Roboto Slab', 'Arial', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #B6BCBF;
+    margin-top: 10px;
+    margin-top: 10px;
+    transition: opacity 0.15s linear;
+}
+
+.articles__source:hover {
+    opacity: 0.6;
+}
+
+@media screen and (max-width: 1024px) {
+    .articles__element {
+        max-height: 420px;
+    }
+
+    .articles__image {
+        max-width: 224px;
+        max-height: 150px;
+    }
+
+    .articles__description {
+        padding: 16px;
+        height: 238px;
+        max-width: 192px;
+    }
+
+    .articles__title {
+        font-size: 22px;
+        line-height: 24px;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-device-width: 767px) {
+    .articles__element {
+        max-height: 440px;
+        margin-bottom: 10px;
+    }
+
+    .articles__element:last-of-type {
+        margin: 0;
+    }
+
+    .articles__image {
+        max-width: 288px;
+        max-height: 196px;
+    }
+
+    .articles__description {
+        height: 212px;
+        max-width: 256px;
+    }
+}

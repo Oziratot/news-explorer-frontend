@@ -1,0 +1,52 @@
+[
+    {
+        "keyword": "Природа",
+        "title": "Национальное достояние – парки",
+        "text": "В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.",
+        "date": "2 августа, 2019",
+        "source": "ДЗЕН",
+        "link": "https://yandex.ru/",
+        "image": "https://images.unsplash.com/photo-1611702700101-015be5630f10?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80",
+        "_id": 1
+    },
+    {
+        "keyword": "Природа",
+        "title": "Лесные огоньки: история одной фотографии",
+        "text": "Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного из местных чудес природы.",
+        "date": "2 августа, 2019",
+        "source": "АФИША",
+        "link": "https://www.afisha.ru/",
+        "image": "https://images.unsplash.com/photo-1611711522429-384bfeea79e0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80",
+        "_id": 2
+    },
+    {
+        "keyword": "Тайга",
+        "title": "«Первозданная тайга»: новый фотопроект Игоря Шпиленка",
+        "text": "Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...",
+        "date": "2 августа, 2019",
+        "source": "МЕДИАЗОНА",
+        "link": "https://zona.media/",
+        "image": "https://images.unsplash.com/photo-1611696380152-186b7265b7be?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+        "_id": 3
+    },
+    {
+        "keyword": "Авто",
+        "title": "Национальное достояние – парки",
+        "text": "В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.",
+        "date": "2 августа, 2019",
+        "source": "ДЗЕН",
+        "link": "https://yandex.ru/",
+        "image": "https://images.unsplash.com/photo-1611737716329-69c2bb3056b9?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+        "_id": 4
+    },
+    {
+        "keyword": "Политика",
+        "title": "Лесные огоньки: история одной фотографии",
+        "text": "Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного из местных чудес природы.",
+        "date": "2 августа, 2019",
+        "source": "АФИША",
+        "link": "https://www.afisha.ru/",
+        "image": "https://images.unsplash.com/photo-1611690132358-e493f29c6230?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=658&q=80",
+        "_id": 5
+    }
+]
