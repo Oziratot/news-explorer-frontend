@@ -20,12 +20,21 @@ function App() {
   const [isMobile, setIsMobile] = React.useState(false);
   const history = useHistory();
 
+  // changing the header depending on the screen width
   React.useEffect(() => {
     const width = window.innerWidth;
     if (width < 768) {
       setIsMobile(true);
     }
   }, [])
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth < 768) {
+      setIsMobile(true);
+    } else {
+      setIsMobile(false);
+    }
+  })
 
   // close on esc
   document.addEventListener('keyup', (e) => {

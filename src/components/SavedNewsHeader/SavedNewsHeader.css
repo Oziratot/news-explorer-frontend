@@ -41,7 +41,7 @@
     font-weight: 700;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
     .saved-news-header {
         padding: 24px 40px 32px 40px;
         max-width: 688px;
@@ -65,7 +65,7 @@
     }
 }
 
-@media all and (max-device-width: 767px) {
+@media screen and (max-width: 767px) {
     .saved-news-header {
         padding: 8px 16px 32px 16px;
     }

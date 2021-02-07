@@ -93,7 +93,7 @@
     background-color: #2A65CC;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
     .searchform {
         padding: 104px 0 48px 0;
     }
@@ -132,7 +132,7 @@
     }
 }
 
-@media all and (max-device-width: 767px) {
+@media screen and (max-width: 767px) {
     .searchform {
         width: auto;
         padding: 86px 16px 32px 16px;
@@ -141,6 +141,7 @@
     .searchform__title {
         font-size: 36px;
         line-height: 40px;
+        padding: 0;
     }
 
     .searchform__subtitle {

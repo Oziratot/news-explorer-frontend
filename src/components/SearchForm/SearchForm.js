@@ -11,7 +11,8 @@ function SearchForm({ onSearch }) {
                     <div className="searchform__field">
                         <input  className="searchform__input"
                                 type="text"
-                                placeholder="Введите тему новости" />
+                                placeholder="Введите тему новости"
+                                required />
                         <button className="searchform__search-btn"
                                 type="submit">Искать</button>
                     </div>
