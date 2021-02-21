@@ -1,15 +1,19 @@
 import React from 'react';
 import NewsCard from '../NewsCard/NewsCard';
+import SavedNewsHeader from '../SavedNewsHeader/SavedNewsHeader';
 
-function SavedNews({ articles }) {
+function SavedNews({ savedArticles, onDeleteArticle, name }) {
     return (
-        <section className="saved-news">
-            <ul className="saved-articles">
-                {articles.map((article) => (
-                    <NewsCard key={article._id} article={article} />
-                ))}
-            </ul>
-        </section>
+        <>
+            <SavedNewsHeader name={name} savedArticles={savedArticles} />
+            <section className="saved-news">
+                <ul className="saved-articles">
+                    {savedArticles.map((article) => (
+                        <NewsCard key={article._id} article={article} onDeleteArticle={onDeleteArticle} savedArticles={savedArticles} />
+                    ))}
+                </ul>
+            </section>
+        </>
     )
 }
 

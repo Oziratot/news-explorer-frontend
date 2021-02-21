@@ -59,9 +59,13 @@
     margin-bottom: 22px;
 }
 
+.popup__btn-container {
+    margin-top: 39px;
+}
+
 .popup__save-btn {
     padding: 0;
-    margin-top: 39px;
+    margin-top: 9px;
     margin-bottom: 16px;
     width: 100%;
     height: 64px;
@@ -104,6 +108,17 @@
     cursor: pointer;
 }
 
+.popup__error {
+    color: #FF0000;
+    text-align: center;
+    margin: 0;
+    margin-top: -22px;
+    font-family: 'Inter';
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: normal;
+}
+
 @media screen and (max-width: 500px) {
 
     .popup__container {
@@ -111,7 +126,7 @@
         align-self: flex-end;
         width: 100%;
         height: 504px;
-        margin-bottom: -20px;
+        margin-bottom: -22px;
     }
 
     .popup__close-btn {

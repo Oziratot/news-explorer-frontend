@@ -1,8 +1,8 @@
 import React from 'react';
 
-function SavedNewsHeader({ name, articles }) {
+function SavedNewsHeader({ name, savedArticles }) {
 
-    const length = articles.length;
+    const length = savedArticles.length;
     function saved(length) {
         if (length === 1) {
             return "сохраненная статья"
@@ -13,7 +13,7 @@ function SavedNewsHeader({ name, articles }) {
         }
     };
 
-    const keywords = articles.map(article => article = article.keyword);
+    const keywords = savedArticles.map(article => article = article.keyword);
     const uniqueKeywords = [...new Set(keywords)];
     function span(unique) {
         if (unique.length === 1) {
@@ -24,7 +24,7 @@ function SavedNewsHeader({ name, articles }) {
     } 
 
     function left(unique) {
-        if (unique.length >= 2) {
+        if (unique.length > 2) {
             return `и ${unique.length - 2}-м другим`
         }
     }

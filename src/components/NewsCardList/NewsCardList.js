@@ -1,7 +1,7 @@
 import React from 'react';
 import NewsCard from '../NewsCard/NewsCard';
 
-function NewsCardList({ articles, loggedIn }) {
+function NewsCardList({ articles, loggedIn, onSaveArticle, onDeleteArticle, savedArticles, links }) {
     const [shownArticles, setShownArticles] = React.useState([]);
     const [isButtonVisble, setIsButtonVisible] = React.useState(true);
 
@@ -23,10 +23,13 @@ function NewsCardList({ articles, loggedIn }) {
         <section className="news">
             <h3 className="news__results">Результаты поиска</h3>
             <ul className="articles">
-                {shownArticles.map((article) => (
-                    <NewsCard key={article._id}
+                {shownArticles.map((article, index) => (
+                    <NewsCard key={index}
                             article={article}
-                            loggedIn={loggedIn} />
+                            loggedIn={loggedIn}
+                            onSaveArticle={onSaveArticle}
+                            onDeleteArticle={onDeleteArticle}
+                            savedArticles={savedArticles} />
                 ))}
             </ul>
             <button className={`news-list__button ${isButtonVisble && "news-list__button_visible"}`} onClick={handleClick}>Показать еще</button>

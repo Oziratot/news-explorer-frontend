@@ -1,6 +1,6 @@
 import React from 'react'
 
-function PopupWithForm({ name, isOpen, onClose, title, children, submitButtonText, undertext, onSubmit, switchTo, active }) {
+function PopupWithForm({ name, isOpen, onClose, title, children, submitButtonText, undertext, onSubmit, switchTo, isValid, message }) {
     return (
         <div className={`popup popup_modal_type_${name} ${isOpen && 'popup_opened'}`}>
             <form name={`${name}`}
@@ -14,7 +14,12 @@ function PopupWithForm({ name, isOpen, onClose, title, children, submitButtonTex
                 
                 <p className={`popup__text popup__text_type_${name}`}>{title}</p>
                 {children}
-                <button type="submit" className={`popup__save-btn ${active && "popup__save-btn_active"}`}>{submitButtonText}</button>
+                
+                <div className="popup__btn-container">
+                    {message ? <p className="popup__error">{message}</p> : <></>}
+                    <button type="submit" disabled={!isValid} className={`popup__save-btn ${isValid && "popup__save-btn_active"}`}>{submitButtonText}</button>
+                </div>
+                
                 <p className="popup__undertext">Или
                     <button className="popup__underbutton" type="button" onClick={switchTo}>{undertext}</button>
                 </p>

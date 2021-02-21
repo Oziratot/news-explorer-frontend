@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 
-function NewsCard({ article, loggedIn }) {
+function NewsCard({ article, loggedIn, onSaveArticle, onDeleteArticle, savedArticles }) {
 
 const location = useLocation();
 const path = location.pathname;
@@ -9,12 +9,29 @@ const isSaved = (path === '/saved-news');
 
 const [isArticleSaved, setIsArticleSaved] = React.useState(false);
 const articleMarkClassname = (isArticleSaved ? "articles__button_mark-saved" : "articles__button_mark-logged")
-function handleSave() {
+
+React.useEffect(() => {
+    if (savedArticles) {
+        setIsArticleSaved(savedArticles.find((a) => a.link === article.link));
+    }
+}, [article.link, savedArticles])
+
+function handleMarkClick() {
     if (isArticleSaved) {
         setIsArticleSaved(false);
+        savedArticles.forEach((a) => {
+            if (a.link === article.link) {
+                onDeleteArticle(a);
+            }
+        })
     } else {
         setIsArticleSaved(true);
+        onSaveArticle(article);
     };
+};
+
+function handleDelete() {
+    onDeleteArticle(article);
 };
 
     return (
@@ -23,13 +40,13 @@ function handleSave() {
             <div className="articles__icons">
                 {isSaved ? (
                     <>
-                        <button type="button" onClick={handleSave} className="articles__button articles__button_delete"></button>
+                        <button type="button" onClick={handleDelete} className="articles__button articles__button_delete"></button>
                         <p className="articles__tooltip">Убрать из сохраненных</p>
                         
                     </>
                 ) : (
                     <>
-                        <button type="button" onClick={handleSave} className={`articles__button ${loggedIn ? (articleMarkClassname) : "articles__button_mark"}`}></button>
+                        <button type="button" onClick={handleMarkClick} className={`articles__button ${loggedIn ? (articleMarkClassname) : "articles__button_mark"}`}></button>
                         <p className="articles__tooltip">Войдите, чтобы сохранять статьи</p>
                     </>
                 )}            
