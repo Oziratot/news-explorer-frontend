@@ -25,8 +25,8 @@ function handleMarkClick() {
             }
         })
     } else {
-        setIsArticleSaved(true);
         onSaveArticle(article);
+        setIsArticleSaved(true);
     };
 };
 
